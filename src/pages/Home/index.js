@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import { connect } from 'react-redux';
 import { MdShoppingCart } from 'react-icons/md';
 import { ProductList } from './styles';
 
@@ -26,6 +27,15 @@ class Home extends Component {
     });
   }
 
+  handleAddToCart(product) {
+    const { dispatch } = this.props;
+
+    dispatch({
+      type: 'ADD_TO_CART',
+      product,
+    });
+  }
+
   render() {
     const { products } = this.state;
 
@@ -37,12 +47,12 @@ class Home extends Component {
             <strong> {product.title} </strong>
             <span> {product.priceFormatted} </span>
 
-            <button type="button">
+            <button type="button" onClick={() => this.handleAddToCart(product)}>
               <div>
-                <MdShoppingCart size={16} color="#fff" /> 3
+                <MdShoppingCart size={16} color="#fff" /> {}
               </div>
 
-              <span> ADICIONAR AO CARRINHO </span>
+              <span> ADD TO CART </span>
             </button>
           </li>
         ))}
@@ -51,4 +61,4 @@ class Home extends Component {
   }
 }
 
-export default Home;
+export default connect()(Home);

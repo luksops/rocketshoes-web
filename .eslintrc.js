@@ -18,5 +18,7 @@ module.exports = {
     'react/jsx-filename-extension': ['warn', { extensions: ['.jsx', '.js'] }],
     'import/prefer-default-export': 'off',
     'react/prop-types': 0,
+    'no-console': ['error', { allow: ['tron'] }],
+    'operator-linebreak': [2, 'after', { overrides: { '?': 'before' } }],
   },
 };

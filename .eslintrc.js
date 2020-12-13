@@ -20,5 +20,6 @@ module.exports = {
     'react/prop-types': 0,
     'no-console': ['error', { allow: ['tron'] }],
     'operator-linebreak': [2, 'after', { overrides: { '?': 'before' } }],
+    'no-param-reassign': 'off',
   },
 };

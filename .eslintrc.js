@@ -19,7 +19,11 @@ module.exports = {
     'import/prefer-default-export': 'off',
     'react/prop-types': 0,
     'no-console': ['error', { allow: ['tron'] }],
-    'operator-linebreak': [2, 'after', { overrides: { '?': 'before' } }],
+    'operator-linebreak': [
+      2,
+      'after',
+      { overrides: { '?': 'before', ':': 'before' } },
+    ],
     'no-param-reassign': 'off',
     'implicit-arrow-linebreak': [0],
     'object-curly-newline': [0],

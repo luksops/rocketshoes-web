@@ -55,7 +55,7 @@ export const ProductTable = styled.table`
     span {
       display: block;
       margin-top: 5px;
-      font-size: 18px;
+      font-size: 16px;
       font-weight: bold;
       text-align: center;
     }
@@ -94,7 +94,7 @@ export const Total = styled.div`
   }
 
   strong {
-    font-size: 28px;
+    font-size: 20px;
     margin-left: 5px;
   }
 `;

@@ -39,7 +39,7 @@ function Cart({ cart, removeFromCart, updateAmount, total }) {
                 <img src={product.image} alt={product.title} />
               </td>
               <td>
-                <strong> Tenis Muito MAssa </strong>
+                <strong> {product.title} </strong>
                 <span> {product.priceFormatted} </span>
               </td>
               <td>
@@ -75,7 +75,7 @@ function Cart({ cart, removeFromCart, updateAmount, total }) {
         <button type="button">Buy now</button>
 
         <Total>
-          <span>TOTAL</span>
+          <span>TOTAL: </span>
           <strong> {total} </strong>
         </Total>
       </footer>

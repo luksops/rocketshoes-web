@@ -1,5 +1,38 @@
-import styled from 'styled-components';
+import styled, { keyframes } from 'styled-components';
 import { darken } from 'polished';
+
+const rotate = keyframes`
+  from {
+    transform: rotate(0deg)
+  }
+
+  to {
+    transform: rotate(360deg)
+  }
+`;
+
+export const Container = styled.div.attrs((props) => ({
+  loading: props.loading,
+}))`
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+
+  &[loading] {
+    svg {
+      animation: ${rotate} 2s linear infinite;
+      margin-bottom: 10px;
+    }
+  }
+
+  span {
+    font-size: 20px;
+    font-weight: bold;
+    color: #fff;
+  }
+`;
 
 export const ProductList = styled.ul`
   display: grid;

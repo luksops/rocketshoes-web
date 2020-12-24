@@ -4,12 +4,13 @@ import {
   MdRemoveCircleOutline,
   MdAddCircleOutline,
   MdDelete,
+  MdRemoveShoppingCart,
 } from 'react-icons/md';
 
 import { bindActionCreators } from 'redux';
 import { formatPrice } from '../../utility/format';
 import * as CartActions from '../../store/modules/cart/actions';
-import { Container, ProductTable, Total } from './styles';
+import { Container, ProductTable, Total, CartContainer } from './styles';
 
 function Cart({ cart, removeFromCart, updateAmountRequest, total }) {
   function increment(product) {
@@ -22,63 +23,74 @@ function Cart({ cart, removeFromCart, updateAmountRequest, total }) {
 
   return (
     <Container>
-      <ProductTable>
-        <thead>
-          <tr>
-            <th aria-label="empty" />
-            <th>Product</th>
-            <th>Quantity</th>
-            <th>Subtotal</th>
-            <th aria-label="empty" />
-          </tr>
-        </thead>
-        <tbody>
-          {cart.map((product) => (
-            <tr>
-              <td>
-                <img src={product.image} alt={product.title} />
-              </td>
-              <td>
-                <strong> {product.title} </strong>
-                <span> {product.priceFormatted} </span>
-              </td>
-              <td>
-                <div>
-                  <button type="button" onClick={() => decrement(product)}>
-                    <MdRemoveCircleOutline size={20} color="#7159c1" />
-                  </button>
+      {cart.length > 0 ? (
+        <>
+          <ProductTable>
+            <thead>
+              <tr>
+                <th aria-label="empty" />
+                <th>Product</th>
+                <th>Quantity</th>
+                <th>Subtotal</th>
+                <th aria-label="empty" />
+              </tr>
+            </thead>
+            <tbody>
+              {cart.map((product) => (
+                <tr>
+                  <td>
+                    <img src={product.image} alt={product.title} />
+                  </td>
+                  <td>
+                    <strong> {product.title} </strong>
+                    <span> {product.priceFormatted} </span>
+                  </td>
+                  <td>
+                    <div>
+                      <button type="button" onClick={() => decrement(product)}>
+                        <MdRemoveCircleOutline size={20} color="#7159c1" />
+                      </button>
 
-                  <input type="number" readOnly value={product.amount} />
+                      <input type="number" readOnly value={product.amount} />
 
-                  <button type="button" onClick={() => increment(product)}>
-                    <MdAddCircleOutline size={20} color="#7159c1" />
-                  </button>
-                </div>
-              </td>
-              <td>
-                <strong> {product.subtotal} </strong>
-              </td>
-              <td>
-                <button
-                  type="button"
-                  onClick={() => removeFromCart(product.id)}
-                >
-                  <MdDelete size={20} color="#7159c1" />
-                </button>
-              </td>
-            </tr>
-          ))}
-        </tbody>
-      </ProductTable>
+                      <button type="button" onClick={() => increment(product)}>
+                        <MdAddCircleOutline size={20} color="#7159c1" />
+                      </button>
+                    </div>
+                  </td>
+                  <td>
+                    <strong> {product.subtotal} </strong>
+                  </td>
+                  <td>
+                    <button
+                      type="button"
+                      onClick={() => removeFromCart(product.id)}
+                    >
+                      <MdDelete size={20} color="#7159c1" />
+                    </button>
+                  </td>
+                </tr>
+              ))}
+            </tbody>
+          </ProductTable>
 
-      <footer>
-        <button type="button">Buy now</button>
+          <footer>
+            <button type="button">Buy now</button>
 
-        <Total>
-          <span>TOTAL: </span>
-          <strong> {total} </strong>
-        </Total>
-      </footer>
+            <Total>
+              <span>TOTAL: </span>
+              <strong> {total} </strong>
+            </Total>
+          </footer>
+        </>
+      ) : (
+        <Container>
+          <CartContainer>
+            <MdRemoveShoppingCart size={75} color="#999" />
+            <span>Empty Cart</span>
+          </CartContainer>
+        </Container>
+      )}
     </Container>
   );
 }

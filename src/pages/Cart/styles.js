@@ -98,3 +98,19 @@ export const Total = styled.div`
     margin-left: 5px;
   }
 `;
+
+export const CartContainer = styled.div`
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  svg {
+    margin-bottom: 10px;
+  }
+
+  span {
+    font-size: 18px;
+    font-weight: bold;
+    color: #999;
+  }
+`;

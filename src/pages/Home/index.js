@@ -1,8 +1,9 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import { MdShoppingCart } from 'react-icons/md';
+import { FaSpinner } from 'react-icons/fa';
 import { bindActionCreators } from 'redux';
-import { ProductList } from './styles';
+import { ProductList, Container } from './styles';
 
 import * as CartActions from '../../store/modules/cart/actions';
 import { formatPrice } from '../../utility/format';
@@ -13,10 +14,12 @@ class Home extends Component {
     super();
     this.state = {
       products: [],
+      loading: false,
     };
   }
 
   async componentDidMount() {
+    this.setState({ loading: true });
     const response = await api.get('products');
     const data = response.data.map((product) => ({
       ...product,
@@ -25,6 +28,7 @@ class Home extends Component {
 
     this.setState({
       products: data,
+      loading: false,
     });
   }
 
@@ -35,10 +39,15 @@ class Home extends Component {
   };
 
   render() {
-    const { products } = this.state;
+    const { products, loading } = this.state;
     const { quantity } = this.props;
 
-    return (
+    return loading ? (
+      <Container loading={loading ? 1 : 0}>
+        <FaSpinner size={70} color="#fff" />
+        <span>Loading</span>
+      </Container>
+    ) : (
       <ProductList>
         {products.map((product) => (
           <li key={product.id}>

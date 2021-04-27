@@ -47,7 +47,11 @@ function Cart({ cart, removeFromCart, updateAmountRequest, total }) {
                   </td>
                   <td>
                     <div>
-                      <button type="button" onClick={() => decrement(product)}>
+                      <button
+                        disabled={product.amount <= 1}
+                        type="button"
+                        onClick={() => decrement(product)}
+                      >
                         <MdRemoveCircleOutline size={20} color="#7159c1" />
                       </button>
 

@@ -37,7 +37,6 @@ function* addToCart({ id }) {
 
 function* updateAmount({ id, amount }) {
   if (amount <= 0) {
-    toast.error('Minimum quantity is 1.');
     return;
   }
 

@@ -80,6 +80,11 @@ export const ProductTable = styled.table`
       padding: 6px;
       display: flex;
       align-items: center;
+
+      &:disabled {
+        opacity: 0.4;
+        cursor: not-allowed;
+      }
     }
   }
 `;

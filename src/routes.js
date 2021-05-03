@@ -7,8 +7,8 @@ import Cart from './pages/Cart';
 export default function Routes() {
   return (
     <Switch>
-      <Route path="/" exact component={Home} />
-      <Route path="/cart" exact component={Cart} />
+      <Route path="/rocketshoes-web/" exact component={Home} />
+      <Route path="/rocketshoes-web/cart" exact component={Cart} />
     </Switch>
   );
 }

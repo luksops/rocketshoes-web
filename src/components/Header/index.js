@@ -9,11 +9,11 @@ import logo from '../../assets/img/logo.svg';
 function Header({ cartSize }) {
   return (
     <Container>
-      <Link to="/">
+      <Link to="/rocketshoes-web/">
         <img src={logo} alt="Rocketshoes" />
       </Link>
 
-      <Cart to="/cart">
+      <Cart to="/rocketshoes-web/cart">
         <div>
           <strong>My Cart</strong>
           <span> {cartSize} Itens </span>

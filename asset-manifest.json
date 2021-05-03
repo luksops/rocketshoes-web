@@ -1,0 +1,22 @@
+{
+  "files": {
+    "main.js": "/rocketshoes-web/static/js/main.b55f7688.chunk.js",
+    "main.js.map": "/rocketshoes-web/static/js/main.b55f7688.chunk.js.map",
+    "runtime-main.js": "/rocketshoes-web/static/js/runtime-main.c7479d73.js",
+    "runtime-main.js.map": "/rocketshoes-web/static/js/runtime-main.c7479d73.js.map",
+    "static/css/2.83342f34.chunk.css": "/rocketshoes-web/static/css/2.83342f34.chunk.css",
+    "static/js/2.8e2a847d.chunk.js": "/rocketshoes-web/static/js/2.8e2a847d.chunk.js",
+    "static/js/2.8e2a847d.chunk.js.map": "/rocketshoes-web/static/js/2.8e2a847d.chunk.js.map",
+    "index.html": "/rocketshoes-web/index.html",
+    "static/css/2.83342f34.chunk.css.map": "/rocketshoes-web/static/css/2.83342f34.chunk.css.map",
+    "static/js/2.8e2a847d.chunk.js.LICENSE.txt": "/rocketshoes-web/static/js/2.8e2a847d.chunk.js.LICENSE.txt",
+    "static/media/background.0873fe9d.svg": "/rocketshoes-web/static/media/background.0873fe9d.svg",
+    "static/media/logo.48036d99.svg": "/rocketshoes-web/static/media/logo.48036d99.svg"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.c7479d73.js",
+    "static/css/2.83342f34.chunk.css",
+    "static/js/2.8e2a847d.chunk.js",
+    "static/js/main.b55f7688.chunk.js"
+  ]
+}

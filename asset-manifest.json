@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.js": "/rocketshoes-web/static/js/main.bd6d11c0.chunk.js",
-    "main.js.map": "/rocketshoes-web/static/js/main.bd6d11c0.chunk.js.map",
+    "main.js": "/rocketshoes-web/static/js/main.fb4b15ef.chunk.js",
+    "main.js.map": "/rocketshoes-web/static/js/main.fb4b15ef.chunk.js.map",
     "runtime-main.js": "/rocketshoes-web/static/js/runtime-main.c7479d73.js",
     "runtime-main.js.map": "/rocketshoes-web/static/js/runtime-main.c7479d73.js.map",
     "static/css/2.83342f34.chunk.css": "/rocketshoes-web/static/css/2.83342f34.chunk.css",
@@ -17,6 +17,6 @@
     "static/js/runtime-main.c7479d73.js",
     "static/css/2.83342f34.chunk.css",
     "static/js/2.8e2a847d.chunk.js",
-    "static/js/main.bd6d11c0.chunk.js"
+    "static/js/main.fb4b15ef.chunk.js"
   ]
 }

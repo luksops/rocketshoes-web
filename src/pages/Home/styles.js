@@ -35,10 +35,11 @@ export const Container = styled.div.attrs((props) => ({
 `;
 
 export const ProductList = styled.ul`
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  display: flex;
   grid-gap: 20px;
+  flex-wrap: wrap;
   list-style: none;
+  justify-content: center;
 
   li {
     display: flex;

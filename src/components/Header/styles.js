@@ -5,7 +5,16 @@ export const Container = styled.div`
   display: flex;
   justify-content: space-between;
   align-items: center;
+  flex-wrap: wrap;
   margin: 50px 0;
+
+  @media (max-width: 413px) {
+    justify-content: space-around;
+
+    a {
+      padding-bottom: 10px;
+    }
+  }
 `;
 
 export const Cart = styled(Link)`

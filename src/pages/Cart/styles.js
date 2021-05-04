@@ -6,6 +6,10 @@ export const Container = styled.div`
   background: #fff;
   border-radius: 4px;
 
+  @media (max-width: 630px) {
+    overflow: auto;
+  }
+
   footer {
     margin-top: 30px;
     display: flex;
@@ -92,6 +96,7 @@ export const ProductTable = styled.table`
 export const Total = styled.div`
   display: flex;
   align-items: baseline;
+  justify-content: space-between;
 
   span {
     color: #999;
